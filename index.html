@@ -29,72 +29,106 @@
     </script>
 </head>
 <body class="bg-gray-50 font-sans">
-    <!-- Header Section -->
+    <!-- Play Store Style Header -->
     <header class="sticky top-0 z-50 bg-white shadow-sm">
-        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <img src="logo.png" alt="BudgetBook Logo" class="w-12 h-12 rounded-lg">
-                <div>
-                    <h1 class="text-xl font-bold text-gray-800">BudgetBook</h1>
-                    <p class="text-sm text-gray-500">Your daily expense manager app</p>
-                </div>
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-gray-600">
+                    <i data-feather="arrow-left"></i>
+                </a>
+                <h1 class="text-lg font-medium text-gray-800">BudgetBook</h1>
             </div>
-            <a href="#download" class="hidden md:block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105">
-                Download Now
-            </a>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-gray-600">
+                    <i data-feather="search"></i>
+                </a>
+                <a href="#" class="text-gray-600">
+                    <i data-feather="more-vertical"></i>
+                </a>
+            </div>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
-            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0 animate-fadeIn">
-                    <img src="logo.png" alt="BudgetBook App" class="w-48 h-48 mx-auto md:mx-0 rounded-2xl shadow-lg">
-                </div>
-                <div class="md:w-1/2 md:pl-10 animate-fadeIn">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Take Control of Your <span class="text-primary">Finances</span></h1>
-                    <p class="text-lg text-gray-600 mb-8">BudgetBook helps you track your daily income and expenses easily. Plan your budget, monitor your spending, and save smarter — all in one clean and simple app.</p>
-                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="#download" class="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                            <i data-feather="download" class="mr-2"></i> Download APK
+    <main class="bg-gray-50">
+        <!-- App Header Section -->
+        <section class="bg-white pt-6 pb-4 px-4">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row items-start">
+                    <div class="md:w-1/4 flex justify-center mb-6 md:mb-0">
+                        <img src="logo.png" alt="BudgetBook App" class="w-32 h-32 rounded-xl shadow-md">
+                    </div>
+                    <div class="md:w-3/4 md:pl-6">
+                        <h1 class="text-2xl font-bold text-gray-800 mb-1">BudgetBook</h1>
+                        <p class="text-gray-600 mb-2">A.S Studio</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">4.8 (2.5K reviews)</span>
+                        </div>
+                        <div class="flex items-center space-x-4 mb-4">
+                            <span class="text-gray-600 text-sm">10K+ downloads</span>
+                            <span class="text-gray-600 text-sm">Rated for 3+</span>
+                        </div>
+                        <a href="#download" class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300">
+                            <i data-feather="download" class="mr-2 inline"></i> Install
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Features Section -->
-        <section class="py-16 bg-white">
+        <!-- App Tabs -->
+        <div class="bg-white border-b border-gray-200 sticky top-12 z-40">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Why Choose BudgetBook?</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition-all duration-300 animate-fadeInUp">
-                        <div class="bg-primary bg-opacity-10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                            <i data-feather="dollar-sign" class="text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Easy expense tracking</h3>
-                        <p class="text-gray-600">Log your income and expenses in just a few taps with our intuitive interface.</p>
+                <div class="flex overflow-x-auto">
+                    <a href="#" class="px-4 py-3 text-primary font-medium border-b-2 border-primary">Overview</a>
+                    <a href="#" class="px-4 py-3 text-gray-600 font-medium">Reviews</a>
+                    <a href="#" class="px-4 py-3 text-gray-600 font-medium">About</a>
+                </div>
+            </div>
+        </div>
+        <!-- App Details Section -->
+        <section class="bg-white py-6 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-lg font-medium text-gray-800 mb-4">About this app</h2>
+                <div class="prose text-gray-600 mb-6">
+                    <p>BudgetBook helps you track your daily income and expenses easily. Plan your budget, monitor your spending, and save smarter — all in one clean and simple app.</p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <h3 class="text-sm text-gray-500 mb-1">Updated</h3>
+                        <p class="text-gray-800">May 15, 2025</p>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition-all duration-300 animate-fadeInUp delay-100">
-                        <div class="bg-primary bg-opacity-10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                            <i data-feather="pie-chart" class="text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Visual charts and analytics</h3>
-                        <p class="text-gray-600">Understand your spending patterns with beautiful, easy-to-read charts and reports.</p>
+                    <div>
+                        <h3 class="text-sm text-gray-500 mb-1">Size</h3>
+                        <p class="text-gray-800">12 MB</p>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition-all duration-300 animate-fadeInUp delay-200">
-                        <div class="bg-primary bg-opacity-10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                            <i data-feather="lock" class="text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Secure & offline access</h3>
-                        <p class="text-gray-600">Your data stays private on your device with no cloud sync required.</p>
+                    <div>
+                        <h3 class="text-sm text-gray-500 mb-1">Installs</h3>
+                        <p class="text-gray-800">10,000+</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm text-gray-500 mb-1">Current Version</h3>
+                        <p class="text-gray-800">1.0</p>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-sm text-gray-500 mb-2">App permissions</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Storage</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Photos/Media</span>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Download Section -->
+<!-- Download Section -->
         <section id="download" class="py-16 bg-gradient-to-r from-primary to-secondary">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl font-bold text-white mb-6">Ready to Transform Your Finances?</h2>
@@ -105,53 +139,57 @@
                 <p class="text-white text-opacity-70 mt-4 text-sm">Version 1.0 | Safe & Verified APK</p>
             </div>
         </section>
-
         <!-- Screenshots Section -->
-        <section class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">App Screenshots</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                        <img src="screenshot1.jpg" alt="BudgetBook Screenshot 1" class="w-full h-auto object-cover">
+        <section class="bg-white py-6 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-lg font-medium text-gray-800 mb-4">Screenshots</h2>
+                <div class="flex space-x-4 overflow-x-auto pb-4">
+                    <div class="flex-shrink-0 w-64 h-auto rounded-lg overflow-hidden shadow-sm">
+                        <img src="screenshot1.jpg" alt="BudgetBook Screenshot 1" class="w-full h-full object-cover">
                     </div>
-                    <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 delay-100">
-                        <img src="screenshot2.jpg" alt="BudgetBook Screenshot 2" class="w-full h-auto object-cover">
+                    <div class="flex-shrink-0 w-64 h-auto rounded-lg overflow-hidden shadow-sm">
+                        <img src="screenshot2.jpg" alt="BudgetBook Screenshot 2" class="w-full h-full object-cover">
                     </div>
-                    <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 delay-200">
-                        <img src="screenshot3.jpg" alt="BudgetBook Screenshot 3" class="w-full h-auto object-cover">
+                    <div class="flex-shrink-0 w-64 h-auto rounded-lg overflow-hidden shadow-sm">
+                        <img src="screenshot3.jpg" alt="BudgetBook Screenshot 3" class="w-full h-full object-cover">
                     </div>
-                    <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 delay-300">
-                        <img src="screenshot4.jpg" alt="BudgetBook Screenshot 4" class="w-full h-auto object-cover">
+                    <div class="flex-shrink-0 w-64 h-auto rounded-lg overflow-hidden shadow-sm">
+                        <img src="screenshot4.jpg" alt="BudgetBook Screenshot 4" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
         </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="bg-white py-8 border-t border-gray-200">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-600 mb-4 md:mb-0">© 2025 BudgetBook | Made by ARUSH SHUKLA</p>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-500 hover:text-primary transition-colors">
-                        <i data-feather="twitter"></i>
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-primary transition-colors">
-                        <i data-feather="instagram"></i>
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-primary transition-colors">
-                        <i data-feather="mail"></i>
-                    </a>
+        <!-- Additional Info Section -->
+        <section class="bg-white py-6 px-4 border-t border-gray-200">
+            <div class="container mx-auto">
+                <h2 class="text-lg font-medium text-gray-800 mb-4">Additional Information</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="text-sm text-gray-500 mb-1">Offered By</h3>
+                        <p class="text-gray-800">A.S Studio</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm text-gray-500 mb-1">Developer</h3>
+                        <p class="text-gray-800">ARUSH SHUKLA</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm text-gray-500 mb-1">Category</h3>
+                        <p class="text-gray-800">Finance</p>
+                    </div>
                 </div>
             </div>
+        </section>
+</main>
+    <!-- Footer -->
+    <footer class="bg-white py-4 border-t border-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-600 text-sm">© 2025 BudgetBook | Made by ARUSH SHUKLA</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
     <script>
         feather.replace();
     </script>
-<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
 </body>
 </html>
