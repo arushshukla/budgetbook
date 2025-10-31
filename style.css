@@ -1,51 +1,52 @@
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+
+/* Play Store Style */
+body {
+    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
 }
 
-.animate-fadeIn {
-    animation: fadeIn 1s ease-out forwards;
+/* Hide scrollbar but allow scrolling */
+::-webkit-scrollbar {
+    display: none;
 }
 
-.animate-fadeInUp {
-    animation: fadeInUp 0.8s ease-out forwards;
-    opacity: 0;
+/* App Tabs */
+[role="tablist"] {
+    scrollbar-width: none;
 }
 
-.delay-100 {
-    animation-delay: 0.1s;
-}
-.delay-200 {
-    animation-delay: 0.2s;
-}
-.delay-300 {
-    animation-delay: 0.3s;
+[role="tablist"]::-webkit-scrollbar {
+    display: none;
 }
 
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
+/* Star rating */
+.star-rating {
+    display: inline-flex;
+    align-items: center;
 }
 
-/* Gallery hover effect */
-.gallery-item:hover img {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+/* Screenshots scroll */
+.screenshots-container {
+    scrollbar-width: none;
+}
+
+.screenshots-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* App permissions chips */
+.permission-chip {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f1f3f4;
+    border-radius: 16px;
+    padding: 4px 12px;
+    font-size: 14px;
+    color: #3c4043;
 }
