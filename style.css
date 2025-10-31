@@ -36,6 +36,38 @@ img {
     display: block;
 }
 
+/* Lightbox modal styles */
+#lightbox-modal {
+    transition: opacity 0.3s ease;
+}
+
+#lightbox-modal img {
+    max-height: 90vh;
+    max-width: 90vw;
+}
+
+#lightbox-modal button {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#lightbox-modal button:hover {
+    transform: scale(1.1);
+}
+
+/* Screenshot hover effects */
+[onclick^="openLightbox"] {
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+[onclick^="openLightbox"] {
+    transform: translateY(0);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+[onclick^="openLightbox"]:hover {
+    transform: translateY(-4px);
+    border-color: #e5e7eb !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 /* Improve text readability on small screens */
 h1, h2, h3, p {
     word-wrap: break-word;
@@ -68,20 +100,68 @@ html {
 input, select, textarea {
     font-size: 16px !important; /* Prevent zoom on focus */
 }
-/* Better transitions for mobile */
-* {
-    transition: all 0.2s ease;
+/* Animation classes */
+[data-animate] {
+    opacity: 0;
+    transition: all 0.6s ease-out;
 }
 
+.fade-in {
+    opacity: 1 !important;
+}
+
+.slide-up {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.slide-right {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+/* Initial states */
+[data-animate="slide-up"] {
+    transform: translateY(20px);
+}
+
+[data-animate="slide-right"] {
+    transform: translateX(-20px);
+}
+
+/* Hover effects */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.03);
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Better transitions for mobile */
+* {
+    transition: all 0.3s ease;
+}
 /* Remove hover effects on touch devices */
 @media (hover: none) {
     a:hover, button:hover {
         transform: none !important;
     }
 }
+/* Tab animations */
+[href="#overview"], [href="#reviews"], [href="#about"] {
+    transition: all 0.3s ease;
+    border-bottom-width: 2px;
+    border-color: transparent;
+}
+
 /* App permissions chips */
 .permission-chip {
-    display: inline-flex;
+display: inline-flex;
     align-items: center;
     background-color: #f1f3f4;
     border-radius: 16px;
@@ -92,8 +172,13 @@ input, select, textarea {
 }
 
 /* Responsive typography */
+/* Button hover effects */
+.btn-hover:hover {
+    transform: translateY(-2px);
+}
+
 @media (max-width: 480px) {
-    html {
+html {
         font-size: 14px;
     }
     
