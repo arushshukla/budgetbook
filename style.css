@@ -3,50 +3,105 @@
 body {
     background-color: #f5f5f5;
     font-family: 'Roboto', sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-
-/* Hide scrollbar but allow scrolling */
-::-webkit-scrollbar {
-    display: none;
-}
-
-/* App Tabs */
-[role="tablist"] {
+.no-scrollbar {
+    -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
-[role="tablist"]::-webkit-scrollbar {
+.no-scrollbar::-webkit-scrollbar {
     display: none;
 }
 
+/* Improve touch targets */
+a, button {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Prevent zoom on double-tap */
+* {
+    touch-action: manipulation;
+}
+/* Remove container class as we're using full width on mobile */
+/* Optimize images for mobile */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Improve text readability on small screens */
+h1, h2, h3, p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Better spacing for mobile */
+section {
+    padding: 1rem 0;
+}
+
+/* Optimize buttons for touch */
+button, .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
 /* Star rating */
 .star-rating {
     display: inline-flex;
     align-items: center;
+    font-size: 0.9rem;
 }
 
-/* Screenshots scroll */
-.screenshots-container {
-    scrollbar-width: none;
+/* Prevent layout shifts */
+html {
+    scroll-behavior: smooth;
 }
 
-.screenshots-container::-webkit-scrollbar {
-    display: none;
+/* Better form elements */
+input, select, textarea {
+    font-size: 16px !important; /* Prevent zoom on focus */
+}
+/* Better transitions for mobile */
+* {
+    transition: all 0.2s ease;
 }
 
+/* Remove hover effects on touch devices */
+@media (hover: none) {
+    a:hover, button:hover {
+        transform: none !important;
+    }
+}
 /* App permissions chips */
 .permission-chip {
     display: inline-flex;
     align-items: center;
     background-color: #f1f3f4;
     border-radius: 16px;
-    padding: 4px 12px;
-    font-size: 14px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
     color: #3c4043;
+    margin: 0.25rem;
+}
+
+/* Responsive typography */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
 }
